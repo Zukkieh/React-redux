@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 
 import store from "./store/index";
 
-import Counter from "./Counter/Counter";
+import Counter from "./Counter";
 
 import enTranslations from '@shopify/polaris/locales/en.json';
 import {AppProvider} from '@shopify/polaris';
