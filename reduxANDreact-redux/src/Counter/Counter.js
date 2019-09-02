@@ -6,9 +6,6 @@ import './Counter.css';
 
 import React from 'react';
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { up, down, reset } from '../store/ducks/clickReducer';
 
 class Counter extends React.Component {
   render(){ 
@@ -28,14 +25,5 @@ class Counter extends React.Component {
   }
 }
 
-const mapStateToProps = store => ({
-  newValue: store.clickState.newValue 
-});
+export default Counter;
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({up, down, reset}, dispatch);
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Counter);

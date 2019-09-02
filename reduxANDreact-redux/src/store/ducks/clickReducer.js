@@ -1,14 +1,16 @@
+export const DUCK_NAME = 'clickReducer';
+
 export const Types = {
-    UP: "clickReducers/CLICK_UP_VALUE",
-    DOWN: "clickReducers/CLICK_DOWN_VALUE",
-    RESET: "clickReducers/CLICK_RESET_VALUE",
+    UP: `${DUCK_NAME}/CLICK_UP_VALUE`,
+    DOWN: `${DUCK_NAME}/CLICK_DOWN_VALUE`,
+    RESET: `${DUCK_NAME}/CLICK_RESET_VALUE`,
 }
 
 const initialState = {
     newValue: 0
 };
 
-export const clickReducer = (state = initialState, action) => {
+export default function clickReducer(state = initialState, action){
     switch(action.type){
         case Types.UP:
             return {
